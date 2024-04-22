@@ -16,6 +16,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Indentantion and syntax
 filetype plugin indent on
 set autoindent
 syntax on
