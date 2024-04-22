@@ -27,6 +27,9 @@ set number
 set wildmenu
 set cursorline
 
+" Fix ESC delay
+set ttimeoutlen=0
+
 "Disable mouse
 set mouse=
 
