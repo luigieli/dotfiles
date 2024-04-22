@@ -11,9 +11,6 @@ set nobackup
 set noswapfile
 set nowritebackup
 
-"Show number
-set number
-
 "Replace tabs for spaces
 set tabstop=4
 set shiftwidth=4
@@ -23,7 +20,12 @@ filetype plugin indent on
 set autoindent
 syntax on
 
+" Viewing options
 set ruler
+set linebreak
+set number
+set wildmenu
+set cursorline
 
 "Disable mouse
 set mouse=
