@@ -1,5 +1,6 @@
 call plug#begin()
     " Plugins
+    Plug 'dense-analysis/ale'
     Plug 'vim-airline/vim-airline'
     " Themes
     Plug 'altercation/vim-colors-solarized'
