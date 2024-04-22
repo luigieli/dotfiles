@@ -1,6 +1,8 @@
 call plug#begin()
     " Plugins
     Plug 'dense-analysis/ale'
+	Plug 'mattn/vim-lsp-settings'
+    Plug 'prabirshrestha/vim-lsp'
     Plug 'vim-airline/vim-airline'
     " Themes
     Plug 'altercation/vim-colors-solarized'
@@ -56,5 +58,13 @@ if isdirectory(expand($HOME . '/.vim/plugged/'))
         let g:airline_powerline_fonts = 1
         let g:airline_theme = 'powerlineish'
         set laststatus=2
+    endif
+
+    if isdirectory(expand($HOME . '/.vim/plugged/vim-lsp/'))
+        " Disable vim-lsp default error/warning message
+        let g:lsp_diagnostics_enable = 0
+
+        nmap gd <plug>(lsp-definition)
+        nmap gr <plug>(lsp-reference)
     endif
 endif
