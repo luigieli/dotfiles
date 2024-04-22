@@ -2,6 +2,8 @@ call plug#begin()
     " Plugins
     Plug 'dense-analysis/ale'
 	Plug 'mattn/vim-lsp-settings'
+	Plug 'prabirshrestha/asyncomplete-lsp.vim'
+	Plug 'prabirshrestha/asyncomplete.vim'
     Plug 'prabirshrestha/vim-lsp'
     Plug 'vim-airline/vim-airline'
     " Themes
@@ -66,5 +68,11 @@ if isdirectory(expand($HOME . '/.vim/plugged/'))
 
         nmap gd <plug>(lsp-definition)
         nmap gr <plug>(lsp-reference)
+    endif
+
+    if isdirectory(expand($HOME . '/.vim/plugged/asyncomplete.vim/'))
+		inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+		inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+		inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
     endif
 endif
