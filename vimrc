@@ -26,6 +26,9 @@ filetype plugin indent on
 set autoindent
 syntax on
 
+" Fuzzy Finder
+set path+=**
+
 " Viewing options
 set ruler
 set linebreak
