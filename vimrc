@@ -36,6 +36,12 @@ set number
 set wildmenu
 set cursorline
 
+" Search options
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+
 " Fix ESC delay
 set ttimeoutlen=0
 
