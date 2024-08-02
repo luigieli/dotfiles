@@ -1,9 +1,9 @@
 call plug#begin()
     " Plugins
     Plug 'dense-analysis/ale'
-	Plug 'mattn/vim-lsp-settings'
-	Plug 'prabirshrestha/asyncomplete-lsp.vim'
-	Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'mattn/vim-lsp-settings'
+    Plug 'prabirshrestha/asyncomplete-lsp.vim'
+    Plug 'prabirshrestha/asyncomplete.vim'
     Plug 'prabirshrestha/vim-lsp'
     Plug 'vim-airline/vim-airline'
     " Themes
@@ -11,12 +11,12 @@ call plug#begin()
     Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-"Disable backups
+" Disable backups
 set nobackup
 set noswapfile
 set nowritebackup
 
-"Replace tabs for spaces
+" Replace tabs for spaces
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -39,13 +39,13 @@ set cursorline
 " Fix ESC delay
 set ttimeoutlen=0
 
-"Disable mouse
+" Disable mouse
 set mouse=
 
-"Disable viminfo
+" Disable viminfo
 set viminfo=
 
-"Setting per plugin/theme
+" Setting per plugin/theme
 if isdirectory(expand($HOME . '/.vim/plugged/'))
     if isdirectory(expand($HOME . '/.vim/plugged/vim-colors-solarized/'))
         if has('gui_running')
@@ -74,8 +74,8 @@ if isdirectory(expand($HOME . '/.vim/plugged/'))
     endif
 
     if isdirectory(expand($HOME . '/.vim/plugged/asyncomplete.vim/'))
-		inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-		inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-		inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+        inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+        inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+        inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
     endif
 endif
