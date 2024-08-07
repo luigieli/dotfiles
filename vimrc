@@ -42,6 +42,9 @@ set ignorecase
 set incsearch
 set smartcase
 
+" Clear search results highlits
+nmap <silent> <C-C> :silent noh<CR>
+
 " Fix ESC delay
 set ttimeoutlen=0
 
