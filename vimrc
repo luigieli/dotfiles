@@ -6,6 +6,8 @@ call plug#begin()
     Plug 'prabirshrestha/asyncomplete.vim'
     Plug 'prabirshrestha/vim-lsp'
     Plug 'vim-airline/vim-airline'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
     " Themes
     Plug 'altercation/vim-colors-solarized'
     Plug 'vim-airline/vim-airline-themes'
@@ -86,5 +88,9 @@ if isdirectory(expand($HOME . '/.vim/plugged/'))
         inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
         inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
         inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+    endif
+
+    if isdirectory(expand($HOME . '/.vim/plugged/asyncomplete.vim/'))
+        nnoremap <C-p> :Files<Cr>
     endif
 endif
