@@ -13,4 +13,6 @@ To install each dotifles manually:
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/hyprland.conf ~/.config/hypr/hyprland.conf
+ln -s ~/.dotfiles/hyprlock.conf ~/.config/hypr/hyprlock.conf
+ln -s ~/.dotfiles/hypridle.conf ~/.config/hypr/hypridle.conf
 ```
