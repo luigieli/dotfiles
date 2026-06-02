@@ -200,8 +200,7 @@
             "portable": "",
             "car": "",
             "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
+        }
     },
     "group/music": {
         "orientation": "horizontal",
@@ -215,19 +214,20 @@
     "custom/previous": {
         "format": "",
         "on-click": "playerctl previous",
-        "tooltip": false
+        "return-type": "json",
+        "exec": "stdbuf -oL playerctl --follow metadata --format '{\"text\": \"\", \"class\": \"{{status}}\"}'"
     },
     "custom/next": {
         "format": "",
         "on-click": "playerctl next",
-        "tooltip": false
+        "return-type": "json",
+        "exec": "stdbuf -oL playerctl --follow metadata --format '{\"text\": \"\", \"class\": \"{{status}}\"}'"
     },
     "custom/playpause": {
         "format": "{icon}",
-        "return-type": "json",
-        "exec": "playerctl status --format '{\"alt\": \"{{status}}\", \"class\": \"{{status}}\"}'",
-        "interval": 1,
         "on-click": "playerctl play-pause",
+        "return-type": "json",
+        "exec": "stdbuf -oL playerctl --follow status --format '{\"text\": \"{{status}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}'",
         "format-icons": {
             "Playing": "",
             "Paused": "",
@@ -239,7 +239,6 @@
         "format-paused": "<i>{title}</i> - <i>{artist}</i>",
         "format-stopped": "",
         "title-len": 30
-        // "ignored-players": ["firefox"]
     },
     "custom/media": {
         "format": "{icon} {text}",

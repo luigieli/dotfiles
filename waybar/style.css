@@ -110,8 +110,7 @@ button:hover {
 #custom-notification,
 #idle_inhibitor,
 #mpd,
-#power-profiles-daemon,
-#music {
+#power-profiles-daemon {
     padding: 0 10px;
     color: @base; /* Most colored backgrounds look best with dark text */
     border-radius: 15px;
@@ -308,15 +307,23 @@ label:focus {
     background-color: @teal;
 }
 
-#music {
-    background-color: @mauve;
-}
-
 #mpris,
 #custom-previous,
 #custom-playpause,
 #custom-next {
+    background-color: @mauve;
+    color: @base;
     padding: 0 5px;
+}
+
+#custom-previous {
+    border-radius: 15px 0 0 15px;
+    padding-left: 10px;
+}
+
+#mpris {
+    border-radius: 0 15px 15px 0;
+    padding-right: 10px;
 }
 
 #language {
